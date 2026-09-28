@@ -291,66 +291,107 @@ input[type="submit"]:hover{
 
 /* Diseño responsivo*/
 
-@media(max-width:768px){
+@media (max-width: 768px){
 
+    /* Encabezado */
     .encabezado{
         flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .encabezado img{
+        width: 70px;
+        height: 70px;
     }
 
     .encabezado h2{
         font-size: 1.5rem;
-        text-align: center;
     }
 
+    /* Menú */
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    nav a{
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        margin: 0;
+    }
+
+    /* Secciones */
+    section{
+        padding: 20px;
+        margin: 15px 10px;
+        scroll-margin-top: 180px;
+    }
+
+    /* Títulos */
     h1,h2,h3{
         text-align: center;
     }
 
-    section{
-        padding: 20px;
-        margin: 15px;
+    h2{
+        font-size: 1.5rem;
     }
 
-    ul{
-        padding-left: 30px;
+    h3{
+        font-size: 1.2rem;
     }
 
-    li{
-        margin: 10px 0;
-    }
-
-    table{
-        display: block;
-        overflow-x: auto;
-        width: 100%;
-    }
-
+    /* Imágenes */
     img{
         max-width: 100%;
         height: auto;
     }
 
+    #inicio img{
+        width: 100%;
+    }
+
+    /* Galería */
+    .album{
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .album img{
+        height: auto;
+    }
+
+    /* Tablas */
+    table{
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Formularios */
+    input,
+    textarea{
+        width: 100%;
+    }
+
+    /* Video y mapa */
     iframe{
         width: 100%;
-        height: 300px;
+        height: 250px;
     }
 
-    .album{
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-        gap: 15px;
+    /* Redes sociales */
+    #redes img{
+        width: 50px;
+        height: 50px;
     }
 
-    nav{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        padding: 15px;
-    }
-
-    nav a{
-        font-size: 0.9rem;
-        padding: 8px 12px;
+    /* Texto */
+    p, li{
+        font-size: 0.95rem;
     }
 }
