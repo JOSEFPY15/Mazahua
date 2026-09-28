@@ -304,7 +304,8 @@ input[type="submit"]:hover{
 
     nav{
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
