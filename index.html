@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Centro ceremonial Mazahua</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <audio id="audio-ambiental" autoplay loop preload="auto" playsinline>
+      <source src="audio/freesound_community-birds-chirping-ambiance-26052.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+      const audioAmbiental = document.getElementById('audio-ambiental');
+
+      if (audioAmbiental) {
+        audioAmbiental.volume = 0.7;
+        audioAmbiental.loop = true;
+
+        const iniciarAudio = () => {
+          audioAmbiental.muted = false;
+          audioAmbiental.play().catch(() => {
+            // Algunos navegadores bloquean la reproducción automática hasta la primera interacción.
+          });
+        };
+
+        window.addEventListener('load', iniciarAudio);
+
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            audioAmbiental.pause();
+          } else if (audioAmbiental.paused) {
+            iniciarAudio();
+          }
+        });
+      }
+    </script>
+    
+    <header>
+      <div class="encabezado">
+      <a href="img/logo.png">
+      <img src="img/logo.png" alt="Logo" width="50" height="50" />
+      </a>
+      <h2>Centro ceremonial Mazahua</h2>
+     </div>
+    </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a> |
+    <a href="#sobre-nosotros">Sobre Nosotros</a> |
+    <a href="#mision-vision">Misión y Visión</a> |
+    <a href="#productos">Productos</a> |
+    <a href="#clientes">Clientes</a> |
+    <a href="#galeria">Galería</a> |
+    <a href="#testimonios">Testimonios</a> |
+    <a href="#Ubicación">Ubicación</a>  |
+    <a href="#contacto">Contacto</a> |
+    <a href="#redes">Redes Sociales</a> |
+    <a href="#privacidad">Aviso de Privacidad</a>
+  </nav>
+  <main>
+
+    <section id="inicio">
+        <h2>Inicio</h2>
+        <a href="img/mazahua1.jpg">
+        <img src="img/mazahua1.jpg" alt="Imagen de centro ceremonial mazahua" width="600" height="500">
+        </a>
+        <p>
+            El Centro Ceremonial Mazahua es uno de los espacios culturales más importantes
+            del Estado de México. Se encuentra en la comunidad de Santa Ana Nichi,
+            municipio de San Felipe del Progreso, rodeado de bosques de pino y encino.
+            Este lugar fue creado para preservar, fortalecer y difundir la cultura,
+            tradiciones y costumbres del pueblo mazahua.
+        </p>
+       
+    </section>
+
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            El Centro Ceremonial Mazahua representa un punto de encuentro para las
+            comunidades mazahuas. En sus instalaciones se realizan ceremonias,
+            asambleas, exposiciones artesanales y actividades culturales que permiten
+            conservar la identidad de uno de los pueblos indígenas más importantes
+            del Estado de México.
+        </p>
+    </section>
+
+    <section id="mision-vision">
+        <h2>Misión y Visión</h2>
+
+        <div class="tabla-mision-vision">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Misión</th>
+                        <th>Visión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p>
+                                Preservar, promover y difundir la cultura mazahua mediante
+                                actividades culturales, educativas y ceremoniales que
+                                fortalezcan las raíces y tradiciones de las comunidades
+                                indígenas.
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Ser un espacio de referencia cultural que impulse el
+                                reconocimiento, respeto y conservación del patrimonio histórico,
+                                artístico y espiritual del pueblo mazahua para las futuras
+                                generaciones.
+                            </p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="productos">
+        <h2>Servicios y Actividades</h2>
+
+        <div class="tabla-servicios">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Servicios</th>
+                        <th>Actividades</th>
+                        <th>Video</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Exposición de artesanías mazahuas.</li>
+                                <li>Museo con piezas históricas y culturales.</li>
+                                <li>Exhibición de telares tradicionales.</li>
+                                <li>Áreas para picnic y convivencia familiar.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Ceremonias y asambleas comunitarias.</li>
+                                <li>Senderismo y recorridos ecológicos.</li>
+                                <li>Eventos culturales y tradicionales.</li>
+                                <li>Talleres educativos y comunitarios.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="video-servicios">
+                                <iframe src="https://www.youtube.com/embed/LjaHGKvwuMU?si=BVGY40gPQgNq0rWq" title="Video del Centro Ceremonial Mazahua" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="clientes">
+        <h2>Comunidades y Visitantes</h2>
+        <p>
+            El Centro Ceremonial recibe a integrantes de comunidades mazahuas,
+            estudiantes, investigadores, turistas nacionales e internacionales,
+            además de organizaciones interesadas en la preservación de la cultura
+            indígena mexicana.
+        </p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+    
+
+    <div class="album">
+
+        <img src="img/A1.jpeg" alt="Imagen 1">
+
+        <img src="img/A2.jpeg" alt="Imagen 2">
+
+        <img src="img/A3.jpeg" alt="Imagen 3">
+
+        <img src="img/A4.jpeg" alt="Imagen 4">
+
+        <img src="img/A5.jpeg" alt="Imagen 5">
+
+        <img src="img/A6.jpeg" alt="Imagen 6">
+
+        <img src="img/A7.jpeg" alt="Imagen 7">
+
+        <img src="img/A8.jpeg" alt="Imagen 8">
+
+        <img src="img/A9.jpeg" alt="Imagen 9">
+
+        <img src="img/A10.jpeg" alt="Imagen 10">
+
+        <img src="img/A11.jpeg" alt="Imagen 11">
+
+        <img src="img/mazahua1.jpg" alt="Imagen 12">
+
+    </div>
+
+    </section>
+
+    <section id="testimonios">
+        <h2>Importancia Cultural</h2>
+        <p>
+            El Centro Ceremonial Mazahua es considerado un símbolo de identidad para
+            el pueblo mazahua, ya que permite conservar conocimientos, costumbres,
+            lengua, artesanías y expresiones culturales transmitidas de generación
+            en generación.
+        </p>
+        
+    </section>
+    <section id="Ubicación">
+        <h2>Ubicación</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4263.448888390432!2d-99.96547662435125!3d19.572704836190773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d28963fb64f93d%3A0x88e6f12156c798b4!2sParque%20Estatal%20Centro%20Ceremonial%20Mazahua!5e1!3m2!1ses-419!2smx!4v1790616625938!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+    </section>
+    
+
+    <section id="contacto">
+        <h2>Formulario de Contacto</h2>
+
+        <form action="https://formspree.io/f/xnpndnwp" method="post">
+            <label>Nombre:</label><br>
+            <input type="text"><br><br>
+
+            <label>Correo Electrónico:</label><br>
+            <input type="email"><br><br>
+
+            <label>Mensaje:</label><br>
+            <textarea rows="5" cols="40"></textarea><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <section id="redes">
+       <div>
+    <h2>Síguenos en nuestras redes sociales</h2>
+
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" width="60" height="60">
+    </a>
+
+    <a href="https://www.instagram.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" width="60" height="60">
+    </a>
+
+    <a href="https://www.whatsapp.com" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="60" height="60">
+    </a>
+</div>
+    </section>
+
+    <section id="privacidad">
+        <h2>Aviso de Privacidad</h2>
+        <p>
+            Los datos proporcionados mediante este sitio web serán utilizados
+            únicamente para fines informativos y de contacto.
+        </p>
+    </section>
+
+</main>
+
+    
+    
+  </body>
+</html>

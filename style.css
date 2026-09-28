@@ -1,0 +1,310 @@
+/* Importa la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;500;600&display=swap'); 
+
+/* Diseño general*/
+
+*{
+    margin: 0;   
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F4E8D0;
+    color: #3B2F2F;
+    line-height: 1.8;
+}
+
+#audio-ambiental{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 220px;
+    opacity: 0.9;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 12px;
+}
+
+/* Dieño de encabezado*/
+
+header{
+    background: #6B4F3A;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.encabezado img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.encabezado h2{
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Menu de navegasion*/
+
+nav{
+    background: #3F6B4B;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 120px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: .3s;
+}
+
+nav a:hover{
+    color: #C89B3C;
+}
+
+/* Contenido principal*/
+
+main{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+section{
+    background: white;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    scroll-margin-top: 150px;
+}
+
+/* Titulos*/
+
+h1,h2,h3{
+    font-family: 'Cinzel', serif;
+    color: #6B4F3A;
+    margin-bottom: 15px;
+}
+
+/* Misión y visión */
+
+.tabla-mision-vision,
+.tabla-servicios{
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-mision-vision table,
+.tabla-servicios table{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(107, 79, 58, 0.12);
+}
+
+.tabla-mision-vision th,
+.tabla-mision-vision td,
+.tabla-servicios th,
+.tabla-servicios td{
+    border: 1px solid #E0C9A3;
+    padding: 22px 18px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla-mision-vision th,
+.tabla-servicios th{
+    background: linear-gradient(135deg, #3F6B4B, #5A7E61);
+    color: #fff;
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+}
+
+.tabla-mision-vision td,
+.tabla-servicios td{
+    background: #FFF9F0;
+    color: #3B2F2F;
+}
+
+.tabla-mision-vision p,
+.tabla-servicios p{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.tabla-servicios td ul{
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tabla-servicios td li{
+    margin: 8px 0;
+}
+
+/* Diseño de imagenes*/
+
+#inicio img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* Diseño de video*/
+
+.video-servicios{
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-servicios iframe{
+    width: 100%;
+    min-width: 220px;
+    max-width: 560px;
+    height: 220px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Diseño de mapa*/
+
+iframe{
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Diseño de lista*/
+
+ul{
+    padding-left: 30px;
+}
+
+li{
+    margin: 10px 0;
+}
+
+/*Diseño de galeria de imagenes*/
+
+.album{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.album img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: .4s;
+}
+
+.album img:hover{
+    transform: scale(1.05);
+}
+
+/*Diseño de formulario*/
+
+form{
+    max-width: 600px;
+    margin: auto;
+}
+
+input,
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #C89B3C;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input[type="submit"]{
+    background: #A3472F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+input[type="submit"]:hover{
+    background: #6B4F3A;
+}
+
+/*Diseño de redes sociales*/
+
+#redes{
+    text-align: center;
+}
+
+#redes img{
+    margin: 10px;
+    transition: .3s;
+}
+
+#redes img:hover{
+    transform: translateY(-5px);
+}
+
+/*Diseño de aviso de privasidad*/
+
+#privacidad{
+    background: #6B4F3A;
+    color: white;
+}
+
+#privacidad h2{
+    color: #C89B3C;
+}
+
+/* Diseño responsivo*/
+
+@media(max-width:768px){
+
+    .encabezado{
+        flex-direction: column;
+    }
+
+    .encabezado h2{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
