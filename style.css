@@ -289,109 +289,160 @@ input[type="submit"]:hover{
     color: #C89B3C;
 }
 
-/* Diseño responsivo*/
+/* Diseño responsivo */
+@media (max-width: 768px) {
 
-@media (max-width: 768px){
+    /* Ajuste global de scroll suave para anclas */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Encabezado fijo con z-index seguro */
+    header, .encabezado-container {
+        position: static;
+        top: auto;
+        z-index: auto;
+    }
 
     /* Encabezado */
-    .encabezado{
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .encabezado img{
-        width: 70px;
-        height: 70px;
-    }
-
-    .encabezado h2{
-        font-size: 1.5rem;
-    }
-
-    /* Menú */
-    nav{
+    .encabezado {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
         gap: 8px;
-        padding: 10px;
+        padding: 10px 5px 5px 5px;
     }
 
-    nav a{
-        font-size: 0.85rem;
-        padding: 8px 10px;
+    .encabezado img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .encabezado h2 {
+        font-size: 1.3rem;
         margin: 0;
     }
 
-    /* Secciones */
-    section{
-        padding: 20px;
+    /* Menú ajustado */
+    nav {
+        position: static;
+        top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px 12px;
+        padding: 10px 5px;
+        max-height: 40vh; /* Evita que el menú ocupe demasiado alto */
+        overflow-y: auto; /* Permite scroll interno si la pantalla es muy pequeña */
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 8px;
+        margin: 0;
+        text-decoration: none;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    /* Secciones y offset de scroll corregido */
+    section {
+        padding: 20px 15px;
         margin: 15px 10px;
-        scroll-margin-top: 180px;
+        /* Se usa scroll-margin-top dinámico acorde al tamaño real del header */
+        scroll-margin-top: 140px; 
     }
 
     /* Títulos */
-    h1,h2,h3{
+    h1, h2, h3 {
         text-align: center;
+        word-wrap: break-word;
     }
 
-    h2{
-        font-size: 1.5rem;
+    h1 {
+        font-size: 1.6rem;
     }
 
-    h3{
-        font-size: 1.2rem;
+    h2 {
+        font-size: 1.3rem;
     }
 
-    /* Imágenes */
-    img{
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Imágenes y Contenido Multimedia */
+    img {
         max-width: 100%;
         height: auto;
+        display: block;
     }
 
-    #inicio img{
+    #inicio img {
         width: 100%;
+        border-radius: 8px;
     }
 
     /* Galería */
-    .album{
+    .album {
+        display: grid;
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    .album img{
+    .album img {
+        width: 100%;
         height: auto;
     }
 
     /* Tablas */
-    table{
+    table {
         display: block;
         width: 100%;
         overflow-x: auto;
-        white-space: nowrap;
+        white-space: normal;
+    }
+
+    .tabla-mision-vision table,
+    .tabla-servicios table {
+        min-width: 620px;
+        white-space: normal;
+    }
+
+    .tabla-mision-vision th,
+    .tabla-mision-vision td,
+    .tabla-servicios th,
+    .tabla-servicios td {
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     /* Formularios */
     input,
-    textarea{
+    textarea {
         width: 100%;
+        box-sizing: border-box;
     }
 
     /* Video y mapa */
-    iframe{
+    iframe {
         width: 100%;
-        height: 250px;
+        height: 220px;
+        border: 0;
     }
 
     /* Redes sociales */
-    #redes img{
-        width: 50px;
-        height: 50px;
+    #redes img {
+        width: 40px;
+        height: 40px;
     }
 
     /* Texto */
-    p, li{
+    p, li {
         font-size: 0.95rem;
+        line-height: 1.5;
     }
 }
