@@ -265,12 +265,21 @@ input[type="submit"]:hover{
 
 /*Diseño de redes sociales*/
 
-#redes{
+#redes {
     text-align: center;
 }
 
-#redes img{
-    margin: 10px;
+#redes > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#redes img {
+    display: block;
+    margin: 0;
     transition: .3s;
 }
 
@@ -299,9 +308,9 @@ input[type="submit"]:hover{
 
     /* Encabezado fijo con z-index seguro */
     header, .encabezado-container {
-        position: static;
-        top: auto;
-        z-index: auto;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     /* Encabezado */
@@ -321,14 +330,17 @@ input[type="submit"]:hover{
     }
 
     .encabezado h2 {
-        font-size: 1.3rem;
+        max-width: 100%;
+        font-size: 1.15rem;
+        line-height: 1.25;
         margin: 0;
     }
 
     /* Menú ajustado */
     nav {
-        position: static;
-        top: auto;
+        position: sticky;
+        top: 150px;
+        z-index: 999;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -353,7 +365,7 @@ input[type="submit"]:hover{
         padding: 20px 15px;
         margin: 15px 10px;
         /* Se usa scroll-margin-top dinámico acorde al tamaño real del header */
-        scroll-margin-top: 140px; 
+        scroll-margin-top: 300px;
     }
 
     /* Títulos */
