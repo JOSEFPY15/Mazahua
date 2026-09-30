@@ -421,8 +421,36 @@ input[type="submit"]:hover{
 
     .tabla-mision-vision table,
     .tabla-servicios table {
-        min-width: 620px;
+        min-width: 560px;
         white-space: normal;
+        font-size: 0.82rem;
+    }
+
+    .tabla-mision-vision th,
+    .tabla-mision-vision td,
+    .tabla-servicios th,
+    .tabla-servicios td {
+        padding: 12px 10px;
+    }
+
+    .tabla-mision-vision th,
+    .tabla-servicios th {
+        font-size: 0.95rem;
+    }
+
+    .tabla-mision-vision p,
+    .tabla-servicios p,
+    .tabla-servicios li {
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    .tabla-servicios td ul {
+        padding-left: 16px;
+    }
+
+    .tabla-servicios td li {
+        margin: 4px 0;
     }
 
     .tabla-mision-vision th,
