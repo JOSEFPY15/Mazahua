@@ -1,0 +1,5 @@
+export default function MisionVision() {
+  return (
+    <section id="mision-vision" className="scroll-mt-24 rounded-3xl bg-white p-6 shadow-md ring-1 ring-black/5 sm:p-9"><h2 className="mb-6 text-2xl font-bold text-bosque sm:text-3xl">Misión y Visión</h2><div className="grid gap-5 md:grid-cols-2"><article className="rounded-2xl border-l-4 border-barro bg-crema p-5"><h3 className="mb-2 text-xl font-semibold text-bosque">Misión</h3><p className="leading-7 text-stone-600">Preservar, promover y difundir la cultura mazahua mediante actividades culturales, educativas y ceremoniales que fortalezcan las raíces y tradiciones de las comunidades indígenas.</p></article><article className="rounded-2xl border-l-4 border-hoja bg-crema p-5"><h3 className="mb-2 text-xl font-semibold text-bosque">Visión</h3><p className="leading-7 text-stone-600">Ser un espacio de referencia cultural que impulse el reconocimiento, respeto y conservación del patrimonio histórico, artístico y espiritual del pueblo mazahua para las futuras generaciones.</p></article></div></section>
+  );
+}

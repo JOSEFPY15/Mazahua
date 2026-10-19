@@ -1,0 +1,2 @@
+html { scroll-behavior: smooth; }
+main section[id] { scroll-margin-top: calc(var(--header-height, 10rem) + 1rem); }

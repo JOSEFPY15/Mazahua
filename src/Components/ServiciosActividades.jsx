@@ -1,0 +1,5 @@
+export default function ServiciosActividades() {
+  return (
+    <section id="servicios-actividades" className="scroll-mt-24 rounded-3xl bg-white p-6 shadow-md ring-1 ring-black/5 sm:p-9"><h2 className="mb-6 text-2xl font-bold text-bosque sm:text-3xl">Servicios y actividades</h2><div className="grid gap-5 md:grid-cols-2"><article className="rounded-2xl bg-crema p-5"><h3 className="mb-3 text-xl font-semibold text-bosque">Servicios</h3><ul className="list-inside list-disc space-y-2 leading-6 text-stone-600"><li>Exposición de artesanías mazahuas.</li><li>Museo con piezas históricas y culturales.</li><li>Exhibición de telares tradicionales.</li><li>Áreas para picnic y convivencia familiar.</li></ul></article><article className="rounded-2xl bg-crema p-5"><h3 className="mb-3 text-xl font-semibold text-bosque">Actividades</h3><ul className="list-inside list-disc space-y-2 leading-6 text-stone-600"><li>Ceremonias y asambleas comunitarias.</li><li>Senderismo y recorridos ecológicos.</li><li>Eventos culturales y tradicionales.</li><li>Talleres educativos y comunitarios.</li></ul></article></div></section>
+  );
+}
